@@ -13,3 +13,16 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/
+debug.log
+package-lock.json
+.deploy_git
+themes/next5-leaf
+themes/ritboy
