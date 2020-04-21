@@ -11,10 +11,10 @@ git:
   depth: false
   submodules: false
 
-cache:
-  apt: true
-  directories:
-    - node_modules
+# cache:
+#   apt: true
+#   directories:
+#     - node_modules
 
 before_install:
   # Git Config
