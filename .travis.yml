@@ -11,11 +11,11 @@ git:
   depth: false
   submodules: false
 
-cache:
-  apt: true
-  npm: false
-  directories:
-    - node_modules
+#cache:
+#  apt: true
+#  npm: false
+#  directories:
+#    - node_modules
 
 before_install:
   # Git Config
@@ -33,10 +33,13 @@ before_install:
 
   # Submodules
   - git clone https://${GITHUB_TOKEN}@github.com/ritboylei/hexo-theme-ritboy.git themes/ritboy
+ 
+  - rm -rf node_modules
 
 install: npm install
 
 script:
   - hexo clean
-  - hexo g -d
+  - hexo g
+  - hexo d
 
