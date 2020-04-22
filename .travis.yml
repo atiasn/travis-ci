@@ -24,7 +24,6 @@ before_install:
 
   # clone blog code
   - git clone -b ritboy https://${GITHUB_TOKEN}@github.com/ritboylei/blog-code-ritboy.git blog-code
-  - cd ./blog-code
   - rm -rf source/_posts/Hexo-travis-ci.md
   - sed -i "s#https://github.com/ritboylei/ritboylei.github.io.git#https://${GITHUB_TOKEN}@github.com/ritboylei/ritboylei.github.io.git#g" _config.yml
   - sed -i "s#https://e.coding.net/ritboy/blog.git#https://${CODING_USER}:${CODING_TOKEN}@e.coding.net/ritboy/blog.git#g" _config.yml
@@ -42,5 +41,6 @@ install: npm install
 script:
   - hexo clean
   - hexo g
+  - ls -al public
   - hexo d
 
