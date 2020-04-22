@@ -41,8 +41,9 @@ before_install:
 install: npm install -g
 
 script:
+  - npm ls --depth 0
   - hexo clean
-  - hexo g
+  - hexo g --debug
   - ls -al public
   - hexo d
 
