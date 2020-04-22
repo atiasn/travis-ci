@@ -1,5 +1,6 @@
 language: node_js
-node_js: node
+# node_js: node
+node_js: tls/*
 os: linux
 dist: trusty
 sudo: required
@@ -48,7 +49,6 @@ before_install:
 install: npm install
 
 script:
-  - npm ls
   - hexo clean
   - hexo g 
   - ls -al public
