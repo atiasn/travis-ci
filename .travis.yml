@@ -7,6 +7,7 @@ sudo: required
 env:
   global:
     - TZ=Asia/Shanghai
+    - BLOG_CODE_DIR=blog-code
 
 addons:
  apt:
@@ -21,7 +22,7 @@ cache:
   apt: true
   npm: false
   directories:
-    - node_modules
+    - ${BLOG_CODE_DIR}/node_modules
 
 before_install:
   # Git Config
@@ -29,8 +30,8 @@ before_install:
   - git config --global user.email "ritboylei@gmail.com"
 
   # clone blog code
-  - git clone https://${GITHUB_TOKEN}@github.com/ritboylei/blog-code-ritboy.git blog-code
-  - cd ./blog-code
+  - git clone https://${GITHUB_TOKEN}@github.com/ritboylei/blog-code-ritboy.git ${BLOG_CODE_DIR}
+  - cd ./${BLOG_CODE_DIR}
   - git checkout ritboy
   - sed -i "s#https://github.com/ritboylei/ritboylei.github.io.git#https://${GITHUB_TOKEN}@github.com/ritboylei/ritboylei.github.io.git#g" _config.yml
   - sed -i "s#https://e.coding.net/ritboy/blog.git#https://${CODING_USER}:${CODING_TOKEN}@e.coding.net/ritboy/blog.git#g" _config.yml
