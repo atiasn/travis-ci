@@ -37,6 +37,7 @@ before_install:
 
   # Deploy history
   - git clone --branch=master --single-branch https://github.com/ritboylei/ritboylei.github.io.git .deploy_git
+  - npm install fsevents --save
 
   - npm install
 
