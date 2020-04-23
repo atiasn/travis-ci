@@ -1,5 +1,4 @@
 language: node_js
-# node_js: node
 node_js: lts/*
 os: linux
 dist: trusty
@@ -20,7 +19,7 @@ git:
 
 cache:
   apt: true
- directories:
+  directories:
    - ${BLOG_CODE_DIR}/node_modules
 
 before_install:
@@ -49,3 +48,4 @@ install: npm install
 script:
   - hexo clean
   - hexo g -d
+
