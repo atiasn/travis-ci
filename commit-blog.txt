@@ -1,1 +1,1 @@
-配置分支名到.travis.yml文件中 20200423-11:24:51
+update Hexo-travis-ci file 20200423-11:49:12
