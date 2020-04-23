@@ -20,7 +20,6 @@ git:
 
 cache:
   apt: true
-  npm: false
  directories:
    - ${BLOG_CODE_DIR}/node_modules
 
