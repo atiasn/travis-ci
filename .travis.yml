@@ -7,7 +7,7 @@ env:
   global:
     - TZ=Asia/Shanghai
     - BLOG_CODE_DIR=blog-code
-    - BLOG_CODE_BRANCH=ritboy
+    - BLOG_CODE_BRANCH=master
 
 git:
   depth: false
